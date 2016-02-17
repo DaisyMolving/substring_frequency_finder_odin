@@ -14,5 +14,12 @@ describe Substring do
 	 expect(result).to eq ({"is"=>1})
   end
 
+  it 'should return {"is" => 1, "his" => 1} if the input is "his"' do
+	 substring = Substring.new
+	 dictionary = %w(hello how are you going down there here is the low word or his story)
+	 result = substring.find_substring("his", dictionary)
+	 expect(result).to eq ({"is"=>1, "his"=>1})
+  end
+
 end
 
